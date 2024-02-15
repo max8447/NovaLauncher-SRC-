@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="NovaLauncher.Views.Controls.UserServerEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NovaLauncher.Views.Controls" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="400">
+    <Grid>
+        <StackPanel>
+            <TextBlock FontWeight="SemiBold" Text="Configure Server" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock FontWeight="SemiBold" Text="Server Name" FontSize="14.2" Margin="0 18 0 0"/>
+            <ui:TextBox x:Name="DetailsServerNameTxt" Margin="0 5 0 0"  VerticalAlignment="Stretch" IsReadOnly="True" ClearButtonEnabled="false" FontFamily="SemiBold"/>
+
+            <TextBlock FontWeight="SemiBold" Text="GameMode" FontSize="14.2" Margin="0 8 0 0"/>
+            <ComboBox x:Name="DetailsPlaylistTxt" MinWidth="200" HorizontalAlignment="Stretch" SelectedIndex="0" Margin="0 5 0 0">
+                <ComboBoxItem Content="Solos" />
+                <ComboBoxItem Content="Duos" />
+                <ComboBoxItem Content="Trios" />
+                <ComboBoxItem Content="Squads" />
+                <ComboBoxItem Content="One Shot" />
+                <ComboBoxItem Content="Playground" />
+                <ComboBoxItem Content="Sniper Shootout" />
+            </ComboBox>
+
+            <TextBlock FontWeight="SemiBold" Text="Max Players" FontSize="14.2" Margin="0 8 0 0"/>
+            <ui:NumberBox x:Name="DetailsMaxPlayersTxt" DecimalPlaces="0" Margin="0 5 0 0" Min="1" Max="100" Focusable="False" Value="100"/>
+
+            <TextBlock FontWeight="SemiBold" Text="Region" FontSize="14.2" Margin="0 8 0 0"/>
+            <ComboBox x:Name="DetailsRegionTxt" MinWidth="200" HorizontalAlignment="Stretch" SelectedIndex="0" Margin="0 5 0 0">
+                <ComboBoxItem Content="NA East" />
+                <ComboBoxItem Content="NA West" />
+                <ComboBoxItem Content="Europe" />
+            </ComboBox>
+
+            <TextBlock FontWeight="SemiBold" Text="Auto Start Game" FontSize="14.2" Margin="0,8,0,0"/>
+            <ComboBox x:Name="AutoStartGameBox" MinWidth="200" SelectedIndex="0" Margin="0,5,0,0">
+                <ComboBoxItem Content="On" />
+                <ComboBoxItem Content="Off" />
+            </ComboBox>
+            
+            <TextBlock FontWeight="SemiBold" Text="Matchmaking Key" FontSize="14.2" Margin="0 8 0 0"/>
+            <ui:TextBox x:Name="DetailsMatchmakingKeytxt" Margin="0 5 0 0" FontFamily="SemiBold"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

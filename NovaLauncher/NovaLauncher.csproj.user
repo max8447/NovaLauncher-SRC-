@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Ahava\Documents\GitHub\NovaLauncher\NovaLauncher\NovaLauncher\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Controls\LaunchProgressPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\NewsOption.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\ProcessingRequestControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\ServerItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\Settings\SettingsOptionSBD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\StoreItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\StoreItemInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserServerEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ContentPages\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ContentPages\LeaderboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ContentPages\ServerPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ContentPages\StorePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\InitializationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\LibraryOption.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\UserLoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\LoginLoadPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\ManageStoreItemWNSPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\SeasonTrailer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\StoreItemInfoPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\TOSPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\ContentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Controls\InstallNewBuild.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\LaunchProgressPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\NewBuild.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\NewBuildAddingPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\NewsOption.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\ProcessingRequestControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\ServerItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\Settings\InstantResetOption.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\Settings\MemoryLeakFixOption.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\Settings\SettingsOptionSBD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\StoreItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\StoreItemInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\UninstallBuildPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\UserServerEditor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\DownloadPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\LeaderboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\LibraryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\NewsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\ServerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ContentPages\StorePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\InitializationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\LibraryOption.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\UserLoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Popups\LoginLoadPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Popups\ManageStoreItemWNSPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Popups\SeasonTrailer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Popups\StoreItemInfoPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Popups\TOSPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\ContentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

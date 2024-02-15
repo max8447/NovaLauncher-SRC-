@@ -1,0 +1,210 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>NovaICON.ico</ApplicationIcon>
+    <BaseOutputPath></BaseOutputPath>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Assets\TOD\**" />
+    <Compile Remove="Assets\Videos\**" />
+    <Compile Remove="SocketManager\LauncherInfo\**" />
+    <EmbeddedResource Remove="Assets\TOD\**" />
+    <EmbeddedResource Remove="Assets\Videos\**" />
+    <EmbeddedResource Remove="SocketManager\LauncherInfo\**" />
+    <None Remove="Assets\TOD\**" />
+    <None Remove="Assets\Videos\**" />
+    <None Remove="SocketManager\LauncherInfo\**" />
+    <Page Remove="Assets\TOD\**" />
+    <Page Remove="Assets\Videos\**" />
+    <Page Remove="SocketManager\LauncherInfo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Burbank.otf" />
+    <None Remove="Assets\Fonts\Helvetica-Bold.otf" />
+    <None Remove="Assets\Images\season 7.png" />
+    <None Remove="Models\GameLauncher\GameLauncher.cs~RF3a60f62.TMP" />
+    <None Remove="Resources\01.00AM.jpg" />
+    <None Remove="Resources\01.00PM.jpg" />
+    <None Remove="Resources\02.00AM.jpg" />
+    <None Remove="Resources\02.00PM.jpg" />
+    <None Remove="Resources\03.00AM.jpg" />
+    <None Remove="Resources\03.00PM.jpg" />
+    <None Remove="Resources\04.00AM.jpg" />
+    <None Remove="Resources\04.00PM.jpg" />
+    <None Remove="Resources\05.00AM.jpg" />
+    <None Remove="Resources\05.00PM.jpg" />
+    <None Remove="Resources\06.00AM.jpg" />
+    <None Remove="Resources\06.00PM.jpg" />
+    <None Remove="Resources\07.00AM.jpg" />
+    <None Remove="Resources\07.00PM.jpg" />
+    <None Remove="Resources\08.00AM.jpg" />
+    <None Remove="Resources\08.00PM.jpg" />
+    <None Remove="Resources\09.00AM.jpg" />
+    <None Remove="Resources\09.00PM.jpg" />
+    <None Remove="Resources\10.00AM.jpg" />
+    <None Remove="Resources\10.00PM.jpg" />
+    <None Remove="Resources\11.00AM.jpg" />
+    <None Remove="Resources\11.00PM.jpg" />
+    <None Remove="Resources\12.00AM.jpg" />
+    <None Remove="Resources\12.00PM.jpg" />
+    <None Remove="Resources\season_0.jpg" />
+    <None Remove="Resources\season_1.jpg" />
+    <None Remove="Resources\season_10.jpg" />
+    <None Remove="Resources\season_11.jpg" />
+    <None Remove="Resources\season_12.jpg" />
+    <None Remove="Resources\season_13.jpg" />
+    <None Remove="Resources\season_14.jpg" />
+    <None Remove="Resources\season_2.jpg" />
+    <None Remove="Resources\season_3.jpg" />
+    <None Remove="Resources\season_4.jpg" />
+    <None Remove="Resources\season_5.jpg" />
+    <None Remove="Resources\season_6.jpg" />
+    <None Remove="Resources\season_7.jpg" />
+    <None Remove="Resources\season_8.jpg" />
+    <None Remove="Resources\season_9.jpg" />
+    <None Remove="Resources\Store.png" />
+    <None Remove="Views\Pages\ContentPages\ScreenShot00003.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="NovaICON.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="DiscordRichPresence" Version="1.1.3.18" />
+    <PackageReference Include="MaterialDesignColors" Version="2.1.3-ci246" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.8.1-ci246" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0-preview.5.23302.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+    <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.3" />
+    <PackageReference Include="System.Management" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="System.Runtime.Caching" Version="8.0.0-preview.3.23174.8" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.1" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
+    <PackageReference Include="WPF-UI" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Burbank.otf" />
+    <Resource Include="Assets\Fonts\Helvetica-Bold.otf" />
+    <Resource Include="Assets\Images\season 7.png" />
+    <Resource Include="Resources\01.00AM.jpg" />
+    <Resource Include="Resources\01.00PM.jpg" />
+    <Resource Include="Resources\02.00AM.jpg" />
+    <Resource Include="Resources\02.00PM.jpg" />
+    <Resource Include="Resources\03.00AM.jpg" />
+    <Resource Include="Resources\03.00PM.jpg" />
+    <Resource Include="Resources\04.00AM.jpg" />
+    <Resource Include="Resources\04.00PM.jpg" />
+    <Resource Include="Resources\05.00AM.jpg" />
+    <Resource Include="Resources\05.00PM.jpg" />
+    <Resource Include="Resources\06.00AM.jpg" />
+    <Resource Include="Resources\06.00PM.jpg" />
+    <Resource Include="Resources\07.00AM.jpg" />
+    <Resource Include="Resources\07.00PM.jpg" />
+    <Resource Include="Resources\08.00AM.jpg" />
+    <Resource Include="Resources\08.00PM.jpg" />
+    <Resource Include="Resources\09.00AM.jpg" />
+    <Resource Include="Resources\09.00PM.jpg" />
+    <Resource Include="Resources\10.00AM.jpg" />
+    <Resource Include="Resources\10.00PM.jpg" />
+    <Resource Include="Resources\11.00AM.jpg" />
+    <Resource Include="Resources\11.00PM.jpg" />
+    <Resource Include="Resources\12.00AM.jpg" />
+    <Resource Include="Resources\12.00PM.jpg" />
+    <Resource Include="Resources\season_0.jpg" />
+    <Resource Include="Resources\season_1.jpg" />
+    <Resource Include="Resources\season_10.jpg" />
+    <Resource Include="Resources\season_11.jpg" />
+    <Resource Include="Resources\season_12.jpg" />
+    <Resource Include="Resources\season_13.jpg" />
+    <Resource Include="Resources\season_14.jpg" />
+    <Resource Include="Resources\season_2.jpg" />
+    <Resource Include="Resources\season_3.jpg" />
+    <Resource Include="Resources\season_4.jpg" />
+    <Resource Include="Resources\season_5.jpg" />
+    <Resource Include="Resources\season_6.jpg" />
+    <Resource Include="Resources\season_7.jpg" />
+    <Resource Include="Resources\season_8.jpg" />
+    <Resource Include="Resources\season_9.jpg" />
+    <Resource Include="Assets\Images\ScreenShot00003.png" />
+    <Resource Include="Resources\Store.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Installer">
+      <HintPath>..\..\..\Documents\GitHub\NovaLauncher\NovaLauncher\Installer\bin\Debug\net6.0\Installer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>..\..\..\..\NovaLauncher_Old\NovaLauncher\obj\Release\net6.0-windows\Interop.IWshRuntimeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\API\NovaBackend\Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+</Project>

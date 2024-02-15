@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "NovaLauncher": {
+      "commandName": "Project",
+      "commandLineArgs": "-skipacd -skipverify -skippatchcheck",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "192.168.0.57",
+      "authenticationMode": "Windows"
+    }
+  }
+}

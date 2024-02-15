@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="NovaLauncher.Views.Popups.SeasonTrailer"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NovaLauncher.Views.Popups" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="664.04" d:DesignWidth="1130">
+    <Grid>
+        <materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF393939">
+            <materialDesign:Card.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </materialDesign:Card.Triggers>
+
+            <Grid>
+                <StackPanel>
+                    <DockPanel/>
+                    <WrapPanel HorizontalAlignment="Center">
+                        <DockPanel >
+                            <Grid>
+                                <MediaElement MediaEnded="skipbtn_Click" Height="522" Width="900" VerticalAlignment="Stretch" x:Name="myMediaElement" Stretch="Fill" Loaded="myMediaElement_Loaded" />
+                                <ui:Button x:Name="skipbtn" Content="Skip" Padding="25,5,25,6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,16,13" Click="skipbtn_Click" Height="31.62" Width="115.02"/>
+                            </Grid>
+                        </DockPanel>
+                    </WrapPanel>
+
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

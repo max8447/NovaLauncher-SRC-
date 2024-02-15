@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="NovaLauncher.Views.Controls.NewBuild"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             mc:Ignorable="d" d:DesignWidth="198.2" Height="296">
+    <Grid>
+        <ui:Flyout x:Name="FLYOUT" Height="56" RenderTransformOrigin="0.5,0.5" Width="84" HorizontalAlignment="Right">
+            <StackPanel>
+                <TextBlock Width="280" HorizontalAlignment="Left" Text="Replicants like any other machine are either a benefit or a hazard. If they're a benefit it's not my problem."
+                           TextWrapping="WrapWithOverflow" />
+                <Button Margin="0,8,0,0" Content="The cake is a lie!" />
+            </StackPanel>
+        </ui:Flyout>
+        <Button x:Name="libraryButton" Margin="5,0,5,0" Height="284" Padding="14,9,14,2" Click="SendButtonRequest" Width="188">
+            <StackPanel Height="256">
+                <Grid Margin="0,143,0,0" Width="158">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="4" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="158">
+                        <StackPanel Width="138" Margin="1,0,0,0">
+                            <TextBlock x:Name="seasonName" Text="New Build" FontSize="13" Margin="1,11,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="chapterText" FontSize="13" Foreground="#FFC5C5C5" FontFamily="Calibri" Margin="1,5,0,0" Text="Have an existing build?" HorizontalAlignment="Left" Width="120"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Border CornerRadius="0" Margin="0,38,0,0" HorizontalAlignment="Left">
+                    <Button VerticalAlignment="Bottom" ClipToBounds="True" IsHitTestVisible="False" Padding="9,3,9,9">
+                        <TextBlock x:Name="statusText" Text="Find Build" FontSize="12" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-5"/>
+                    </Button>
+                </Border>
+            </StackPanel>
+        </Button>
+        <Button x:Name="SeasonSettingsbtn" Height="143" Width="158" VerticalAlignment="Top" Panel.ZIndex="10" HorizontalAlignment="Center" Margin="0,20,0,0" IsHitTestVisible="False" Opacity="0.7">
+            <Button.Background>
+                <ImageBrush x:Name="SeasonBrush" Stretch="UniformToFill" ImageSource="/Assets/Images/season 7.png" ></ImageBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" To="159" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Height" To="144" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" To="158" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Height" To="143" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</UserControl>

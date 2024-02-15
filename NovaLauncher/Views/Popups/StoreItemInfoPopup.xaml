@@ -1,0 +1,34 @@
+﻿<UserControl xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"  x:Class="NovaLauncher.Views.Popups.StoreItemInfoPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NovaLauncher.Views.Popups" xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="481.04" d:DesignWidth="1019">
+    <Grid>
+        <Grid Height="310" Width="326" Background="#FF252525">
+            <ui:Card VerticalAlignment="Stretch" Background="#FF252525" BorderBrush="#FF252525" Foreground="#FF252525" VerticalContentAlignment="Stretch" Padding="0,0,0,0">
+                <Grid>
+                    <Grid VerticalAlignment="Top" >
+                        <Border VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Height="50" CornerRadius="40,40,40,40" Margin="16,15,0,0">
+                            <Border.Background>
+                                <ImageBrush x:Name="OptionIcon" Stretch="UniformToFill" ImageSource="/Resources/season_6.jpg"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock x:Name="Titletxt" Text="Tier 1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="78,19,0,0" Foreground="#FFDADADA"/>
+                        <DockPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="78,40,0,0">
+                            <TextBlock x:Name="PaymentCost" Text="$9.99" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17" Foreground="#FFDADADA"/>
+                            <TextBlock x:Name="MonthPaymenttxt" Text="/mo." HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="11" Foreground="#FFDADADA" Margin="2,5,0,0"/>
+                            <materialdesign:Badged Content="Badged" Width="0"/>
+                        </DockPanel>
+                    </Grid>
+                    <ui:DynamicScrollViewer Margin="16,75,16,53">
+                        <ui:TextBox x:Name="Biotxt" FontSize="12.9" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" BorderThickness="0,0,0,0" TextWrapping="WrapWithOverflow" IsEnabled="False"/>
+                    </ui:DynamicScrollViewer>
+                    <ui:Button x:Name="Closebtn" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="Close" Click="Closebtn_Click" Margin="16,0,16,11"/>
+                </Grid>
+            </ui:Card>
+        </Grid>
+    </Grid>
+</UserControl>

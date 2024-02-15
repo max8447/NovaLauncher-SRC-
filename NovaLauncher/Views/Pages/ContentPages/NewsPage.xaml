@@ -1,0 +1,57 @@
+﻿<Page x:Class="NovaLauncher.Views.Pages.ContentPages.NewsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:control = "clr-namespace:NovaLauncher" 
+      xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"  
+      Foreground="White"
+      d:DesignHeight="664.04" d:DesignWidth="1130">
+
+    <Border CornerRadius="10,0,0,0" Margin="6,0,0,0">
+        <Grid>
+            <ui:CardColor BorderBrush="{x:Null}" />
+            <Border VerticalAlignment="Top" Padding="14,10,4,16" Tag="Version">
+                <ui:DynamicScrollViewer Padding="0,0,10,0" VerticalAlignment="Top">
+                    <StackPanel Name="NewsContent">
+                        <Border Grid.Row="0" x:Name="imageBorder" CornerRadius="8,8,8,8" Height="150" Loaded="LoadNews">
+                            <Border.Background>
+                                <ImageBrush x:Name="NovaTODimage" Stretch="UniformToFill" Viewbox="0,0,1,1" AlignmentY="Center" ImageSource="/Assets/Images/season 7.png"/>
+                            </Border.Background>
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="Background.Opacity" To=".9" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="Background.Opacity" To="1" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+                            <Grid>
+                                <Border Background="#A5000000" CornerRadius="8,8,8,8"/>
+                                <TextBlock Name="fortniteCount" FontFamily="pack://application:,,,/Assets/Fonts/Burbank.otf#Burbank Big Condensed" Text="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Foreground="White" />
+                                <TextBlock x:Name="Versiontxt" FontFamily="pack://application:,,,/Assets/Fonts/Burbank.otf#Burbank Big Condensed" Text="v1.0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18" Foreground="White" Margin="10,0,10,5" />
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </ui:DynamicScrollViewer>
+            </Border>
+            <Border x:Name="ScrollButtonControl" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="38" Height="39" Margin="0,0,15,20">
+                <ui:CardAction VerticalAlignment="Stretch" Padding="0,0,0,0" IsChevronVisible="False" HorizontalContentAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <ui:SymbolIcon Symbol="ArrowDown24" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" Margin="0,2,0,0" FontSize="18"/>
+                    </StackPanel>               
+                </ui:CardAction>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

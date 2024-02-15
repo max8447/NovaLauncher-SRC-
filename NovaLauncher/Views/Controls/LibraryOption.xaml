@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="NovaLauncher.Views.Controls.LibraryOption"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+             xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Width="198.2" Height="296">
+    <Grid>
+        <Button x:Name="libraryButton" Margin="5,0,5,0" Height="284" Padding="14,9,14,2" Click="LaunchGame" Width="188" MouseEnter="MouseHover" FontSize="12">
+            <Button.ContextMenu>
+                <ContextMenu Name="cm" StaysOpen="true">
+                    <!--<MenuItem Header="Create Desktop Shortcut"/>-->
+                    <MenuItem Header="Remove from Library" Click="RemoveFromLibrary"/>
+                    <MenuItem Header="Uninstall Build" Click="UninstallGame"/>
+                    <MenuItem x:Name="CloseGameItem" Header="Exit Game" Click="ForceExitGame"/>
+                    <!--<MenuItem x:Name="VerifyGameItem" Header="Verify Files" Click="VerifyGameItem_Click"/>-->
+                    <MenuItem Header="Find">
+                        <MenuItem x:Name="InstalPathbtn" Header="Installation path" Click="OpenInstallPath"/>
+                    </MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+            <StackPanel Height="256">
+                <Grid Margin="0,143,0,0" Width="158">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="48" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="0">
+                        <StackPanel Width="157">
+                            <TextBlock x:Name="seasonName" Text="Season 7.40" FontSize="13" Margin="0,11,0,0" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="chapterText" FontSize="13" Foreground="#FFC5C5C5" FontFamily="Calibri" Margin="0,5,0,0" Text="Chapter 1" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Border CornerRadius="0" Margin="0,38,0,0" HorizontalAlignment="Left">
+                    <Button VerticalAlignment="Bottom" ClipToBounds="True" IsHitTestVisible="False" Padding="9,3,9,9">
+                        <TextBlock x:Name="statusText" Text="Launch" FontSize="12" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-5" Loaded="StatusLoaded" LayoutUpdated="StatusTextChanged"/>
+                    </Button>
+                </Border>
+            </StackPanel>
+        </Button>
+        <Button x:Name="SeasonSettingsbtn" Height="143" Width="158" VerticalAlignment="Top" Panel.ZIndex="10" HorizontalAlignment="Center" Margin="0,20,0,0" IsHitTestVisible="False">
+            <Button.Background>
+                <ImageBrush x:Name="SeasonBrush" Stretch="UniformToFill" ImageSource="/Assets/Images/season 7.png"></ImageBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" To="159" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Height" To="144" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width" To="158" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Height" To="143" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</UserControl>
+

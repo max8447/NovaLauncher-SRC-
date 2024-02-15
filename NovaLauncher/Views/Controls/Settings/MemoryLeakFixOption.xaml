@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="NovaLauncher.Views.Controls.Settings.MemoryLeakFixOption"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="1094">
+
+    <ui:CardAction x:Name="SettingCard" IsEnabled="True" Padding="0" VerticalAlignment="Top" Command="{Binding ViewModel.CardClickCommand, Mode=OneWay}" CommandParameter="DialogsAndFlyouts" IsChevronVisible="False" Height="66" Margin="0,0,0,8" Loaded="LoadContent" Click="SettingCard_Click">
+        <Grid>
+            <DockPanel Margin="11,0,0,0">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="419*"/>
+                            <ColumnDefinition Width="675*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Memory Leak Fix" FontSize="13"/>
+                    </Grid>
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <ui:ToggleSwitch x:Name="MLFSwitch" VerticalAlignment="Top" Margin="0,10,0,0" Checked="EnableMLF" Unchecked="MLFSwitch_Unchecked" IsHitTestVisible="False"/>
+                            <TextBlock x:Name="MLFText" Text="On" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="13" Margin="10,0,0,2"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+                <TextBlock Grid.Column="1" Text="If your game is experiencing crashes within a minute of starting, enabling these settings may help resolve the issue." FontSize="13" HorizontalAlignment="Right" Width="560" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" Margin="0,0,14,0"/>
+
+            </DockPanel>
+        </Grid>
+    </ui:CardAction>
+</UserControl>
